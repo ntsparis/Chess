@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".ui.activity.chess.ChessActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chessParameters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/maxMovesTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/max_moves"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/maxMovesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_material_button_height"
+                android:inputType="number"
+                android:nextFocusDown="@+id/surnameEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chessDimensionTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/chess_dimension"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideLine"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/chessDimensionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_material_button_height"
+                android:inputType="number"
+                android:nextFocusDown="@+id/surnameEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chessParameters" />
+
+    <gr.paris.chess.ui.customView.Chessboard
+        android:id="@+id/chessBoard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:darkTileColor="@color/black"
+        app:dimension="6"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applyButton"
+        app:lightTileColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/loadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/reset_button_bottom_margin"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

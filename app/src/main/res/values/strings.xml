@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Chess</string>
+    <string name="reset">Reset Board</string>
+    <string name="apply">Apply Changes</string>
+    <string name="not_acceptable_dimensions">Chess dimension must be between 6 and 16</string>
+    <string name="not_reachable">Position is not reachable</string>
+    <string name="invalid_steps">Cannot reach the position in %1$d moves</string>
+    <string name="max_moves">Max Moves</string>
+    <string name="chess_dimension">Chess Dimension</string>
+</resources>

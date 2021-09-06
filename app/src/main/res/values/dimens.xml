@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="global_material_button_height">64dp</dimen>
+    <dimen name="background_chess_contour_width">4dp</dimen>
+    <dimen name="reset_button_bottom_margin">24dp</dimen>
+</resources>

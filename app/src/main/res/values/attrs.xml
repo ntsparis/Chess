@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BoardView">
+        <attr name="darkTileColor" format="color" />
+        <attr name="lightTileColor" format="color" />
+        <attr name="dimension" format="integer" />
+    </declare-styleable>
+
+</resources>
